@@ -1,0 +1,23 @@
+from fileinput import filename
+
+
+def read_file_content(content): # [assignment] Add your code here 
+    filename = open(content, "r")
+    return filename.read()
+
+def count_words():
+        counts = dict()
+        words = read_file_content("story.txt").split()
+
+        for word in words:
+            if word in counts:
+                counts[word] += 1
+            else:
+                counts[word] = 1
+        print(counts)
+
+count_words()
+
+
+
+        
